@@ -12,12 +12,12 @@ include-in-header:
 ::: {.hero__glow}
 :::
 ::: {.wrap}
-<span class="eyebrow reveal">Boston University · Applied Business Analytics</span>
+<span class="eyebrow reveal">Boston University · AD688 Applied Business Analytics</span>
 
-# [Simon Hamra.]{.reveal .d1}<br>[I read labor markets]{.reveal .d2} [with data.]{.accent .reveal .d2}
+# [Simon Hamra.]{.reveal .d1}<br>[A course portfolio]{.reveal .d2} [in labor data.]{.accent .reveal .d2}
 
 ::: {.hero__thesis .reveal .d3}
-I take large job posting data from Lightcast and turn it into clear answers about pay, skills and demand. I keep the heavy work in PySpark, and I am moving into machine learning, which is the field I want to build my career in.
+This site collects the three projects I built for my graduate analytics course at Boston University. All three run on the same large Lightcast job posting data: I clean and chart a 700 MB file in PySpark, model it as a small warehouse in Spark SQL, and train machine learning models to predict pay. It is coursework, but the numbers are real and I kept the hard parts in.
 :::
 
 ::: {.btn-row .reveal .d4}
@@ -27,8 +27,8 @@ I take large job posting data from Lightcast and turn it into clear answers abou
 :::
 
 ::: {.hero__viz .reveal .d5}
-![](assets/charts/hero_market.png)
-<figcaption>Every dot is a real job posting from the Lightcast data: years of experience against advertised salary. The bright point is where I want to be, an analyst moving into machine learning.</figcaption>
+![](assets/charts/pay_by_occupation.png)
+<figcaption>From the visualization project (Assignment 3): median advertised salary by occupation across the Lightcast postings, using real observed pay only. The engineering-heavy roles sit at the top.</figcaption>
 :::
 :::
 :::
@@ -55,10 +55,10 @@ I take large job posting data from Lightcast and turn it into clear answers abou
 ::: {.section}
 ::: {.wrap}
 ::: {.section__head}
-<span class="eyebrow">Selected work</span>
+<span class="eyebrow">Course work</span>
 
-## Three projects, one dataset, real numbers
-All three come from the same Lightcast job postings data in my BU analytics course. I kept the heavy work in Spark and only pulled small tables out to draw the charts.
+## Three assignments, one dataset, real numbers
+These are the three graded projects from my AD688 analytics course, each on the same Lightcast job postings data. Every one shows a different skill, and I kept the heavy work in Spark and only pulled small tables out to draw the charts.
 :::
 
 ::: {.bento}
@@ -67,7 +67,7 @@ All three come from the same Lightcast job postings data in my BU analytics cour
 <a class="pcard__link" href="projects.qmd#a03">Salary insights at scale</a>
 <div class="pcard__media"><img src="assets/charts/pay_by_education.png" alt="Median salary by education level"></div>
 <div class="pcard__body">
-<span class="pcard__meta">PySpark · Visualization</span>
+<span class="pcard__meta">Assignment 3 · PySpark · Visualization</span>
 <h3>Salary insights at scale</h3>
 <p>I loaded a 700 MB file in Spark, cleaned the messy salary and education fields, filled the gaps in a careful way, and built charts that explain pay across industry, education and remote work.</p>
 <div class="tags"><span class="tag">PySpark</span><span class="tag">pandas</span><span class="tag">Plotly</span><span class="tag">Seaborn</span></div>
@@ -79,7 +79,7 @@ All three come from the same Lightcast job postings data in my BU analytics cour
 <a class="pcard__link" href="projects.qmd#a05">Predicting salary, and a trap</a>
 <div class="pcard__media"><img src="assets/charts/salary_drivers.png" alt="What moves salary, feature importance"></div>
 <div class="pcard__body">
-<span class="pcard__meta">Machine learning</span>
+<span class="pcard__meta">Assignment 5 · Machine learning</span>
 <h3>Predicting salary, and a trap</h3>
 <p>Linear, polynomial and random forest models. Spark refused to give me standard errors, so I had to find out why.</p>
 <div class="tags"><span class="tag">Spark ML</span><span class="tag">Random forest</span></div>
@@ -91,7 +91,7 @@ All three come from the same Lightcast job postings data in my BU analytics cour
 <a class="pcard__link" href="projects.qmd#a02">A job market in SQL</a>
 <div class="pcard__media"><img src="assets/charts/pay_by_state.png" alt="Top paying states"></div>
 <div class="pcard__body">
-<span class="pcard__meta">Spark SQL · Data modeling</span>
+<span class="pcard__meta">Assignment 2 · Spark SQL · Data modeling</span>
 <h3>A job market in SQL</h3>
 <p>I broke one flat file into clean relational tables for companies, industries and locations, then answered four real questions about pay, remote work, and how hiring moves over the year.</p>
 <div class="tags"><span class="tag">Spark SQL</span><span class="tag">Star schema</span><span class="tag">Joins</span><span class="tag">matplotlib</span></div>
