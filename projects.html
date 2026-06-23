@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-388b1c9ba0406cb9909c1a3fd5f6a45b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-37bcf5ca5a3a74216adb90a4b6f2b605.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dd446b9ec3dff85010fad10d2bf56424.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -159,21 +159,87 @@ ul.task-list li input[type="checkbox"] {
 <div class="page-intro">
 <div class="wrap">
 <p><span class="eyebrow">Projects</span></p>
-<section id="three-case-studies." class="level1">
-<h1>Three case studies.</h1>
+<section id="three-course-assignments." class="level1">
+<h1>Three course assignments.</h1>
 <div class="lead">
-<p>All three use the same Lightcast job posting data from my Boston University course. Each one shows a different skill: cleaning and charting big data, building machine learning models, and modeling data in SQL. I kept the honest numbers, including the parts that were hard.</p>
+<p>These are the three graded projects from my AD688 Applied Business Analytics course at Boston University. All three run on the same large Lightcast job posting dataset, and each one targets a different skill: modeling the data in SQL, cleaning and charting it at scale, and building machine learning models on it. I kept the honest numbers, including the parts that were hard. Each case links to the assignment repository with the full notebook.</p>
 </div>
 </section>
 </div>
 </div>
 <section>
 <div class="wrap">
+<!-- ================= A02 ================= -->
+<div id="a02" class="case">
+<div class="case__grid">
+<div class="case__text">
+<p><span class="eyebrow">Assignment 02 · Spark SQL · Data modeling</span></p>
+<section id="a-job-market-in-sql" class="level2">
+<h2 data-anchor-id="a-job-market-in-sql">A job market in SQL</h2>
+<p>I turned one flat Lightcast file into a small data warehouse, then answered four real questions about pay and hiring in Spark SQL.</p>
+<dl class="dl">
+<div>
+<dt>
+Problem
+</dt>
+<dd>
+A single wide table is hard to query and full of repeated values. I wanted clean, joinable tables and a few clear answers about pay and hiring.
+</dd>
+</div>
+<div>
+<dt>
+Constraints
+</dt>
+<dd>
+The same large Lightcast file, so I built and queried everything in Spark SQL instead of loading it into memory.
+</dd>
+</div>
+<div>
+<dt>
+Approach
+</dt>
+<dd>
+I split the data into dimension tables for <strong>companies, industries and locations</strong>, each with its own surrogate key, then joined them back into one fact table of postings. That is a <strong>star schema</strong>. On top of it I wrote four queries: median pay by specialized occupation inside the Technology industry (NAICS 518210), the top five remote employers in California, month-by-month California posting volume, and average pay across twelve major US metros.
+</dd>
+</div>
+<div>
+<dt>
+Tradeoff
+</dt>
+<dd>
+I could have kept one flat table and queried it directly, which is faster to set up. I chose the star schema because the joins stay clean, the dimension tables are reusable, and it is closer to how a real data warehouse works.
+</dd>
+</div>
+<div>
+<dt>
+Result
+</dt>
+<dd>
+<strong>1 star schema, 4 queries.</strong> Pay is highest in expensive metros like San Francisco and Seattle, remote hiring concentrates in a few large employers, and California posting volume dips over the summer then recovers toward the end of the year.
+</dd>
+</div>
+</dl>
+<div class="tags">
+<span class="tag">PySpark</span><span class="tag">Spark SQL</span><span class="tag">Star schema</span><span class="tag">Joins</span><span class="tag">seaborn</span><span class="tag">matplotlib</span>
+</div>
+<div class="btn-row">
+<p><a href="https://github.com/AD688-SP26/a02-sum26-simonhamra" class="btn btn--ghost">Repository &amp; notebook</a></p>
+</div>
+</section>
+</div>
+<div class="case__fig">
+<img src="assets/charts/pay_by_state.png" class="img-fluid">
+<figcaption>
+Median advertised salary by state. The pay gap between the top states and the rest is large.
+</figcaption>
+</div>
+</div>
+</div>
 <!-- ================= A03 ================= -->
 <div id="a03" class="case">
 <div class="case__grid">
 <div class="case__text">
-<p><span class="eyebrow">Project 01 · PySpark · Visualization</span></p>
+<p><span class="eyebrow">Assignment 03 · PySpark · Visualization</span></p>
 <section id="salary-insights-at-scale" class="level2">
 <h2 data-anchor-id="salary-insights-at-scale">Salary insights at scale</h2>
 <p>I took a 700 MB Lightcast file, cleaned it in Spark, and turned it into clear pictures of who gets paid what.</p>
@@ -191,7 +257,7 @@ The file holds tens of thousands of job postings, but it is messy. Salary, exper
 Constraints
 </dt>
 <dd>
-The raw file is close to <strong>700 MB</strong>, too big to open in pandas on a laptop. So all the heavy work, loading, casting, medians and grouping, had to stay in Spark. I only pulled small tables out at the end.
+The raw file is close to <strong>700 MB</strong>, too big to open in pandas on a laptop. So all the heavy work, loading, casting, medians and grouping, had to stay in Spark. I only pulled small, already-aggregated tables into pandas right before drawing each chart.
 </dd>
 </div>
 <div>
@@ -199,7 +265,7 @@ The raw file is close to <strong>700 MB</strong>, too big to open in pandas on a
 Approach
 </dt>
 <dd>
-I cast the salary and experience columns to numbers, computed medians in Spark, and filled missing salaries with a careful midpoint rule. I kept a copy of the real observed salary, so when I report a true median I never use a filled value. Then I drew the charts with Plotly and Seaborn on a custom theme.
+I cast the salary and experience columns to numbers, computed medians in Spark, and filled missing salaries with a careful midpoint rule, keeping a separate copy of the real observed salary so a reported median never uses a filled value. Then I built five visuals on a custom Plotly theme: a salary-floor box plot by industry and employment type, a median-pay bubble chart by occupation, experience-versus-pay scatters split by education and by remote type, and an overlaid salary histogram.
 </dd>
 </div>
 <div>
@@ -207,7 +273,7 @@ I cast the salary and experience columns to numbers, computed medians in Spark, 
 Tradeoff
 </dt>
 <dd>
-I had to choose between dropping rows with no salary or filling them. Dropping throws away most of the data. Filling keeps it, but it can hide the truth. My answer was to do both: fill for completeness, but always use the observed salary for any real median.
+I had to choose between dropping rows with no salary or filling them. Dropping throws away most of the data; filling keeps it but can hide the truth. My answer was to do both: fill for completeness, but always use the observed salary for any real median.
 </dd>
 </div>
 <div>
@@ -215,7 +281,7 @@ I had to choose between dropping rows with no salary or filling them. Dropping t
 Result
 </dt>
 <dd>
-<strong>72,498 postings</strong> cleaned and charted. Full time roles pay more, remote and hybrid roles lean higher, and the best paid occupation reaches about <strong>$158k</strong> while the most common roles sit near $95k to $126k.
+<strong>72,498 postings</strong> cleaned and charted. Full-time roles pay more, remote and hybrid roles lean higher, and the best-paid occupation reaches about <strong>$158k</strong> while the most common roles sit near $95k to $126k.
 </dd>
 </div>
 </dl>
@@ -223,7 +289,7 @@ Result
 <span class="tag">PySpark</span><span class="tag">pandas</span><span class="tag">Plotly</span><span class="tag">Seaborn</span><span class="tag">Quarto</span>
 </div>
 <div class="btn-row">
-<p><a href="https://github.com/simonhamra" class="btn btn--ghost">Code on GitHub</a></p>
+<p><a href="https://github.com/AD688-SP26/a03-sum26-simonhamra" class="btn btn--ghost">Repository &amp; notebook</a></p>
 </div>
 </section>
 </div>
@@ -239,7 +305,7 @@ Median advertised salary by occupation, using real observed pay only. The engine
 <div id="a05" class="case">
 <div class="case__grid">
 <div class="case__text">
-<p><span class="eyebrow">Project 02 · Machine learning</span></p>
+<p><span class="eyebrow">Assignment 05 · Machine learning</span></p>
 <section id="predicting-salary-and-a-trap" class="level2">
 <h2 data-anchor-id="predicting-salary-and-a-trap">Predicting salary, and a trap</h2>
 <p>I trained three models to predict salary, and hit a classic trap that stops a model from giving any statistics.</p>
@@ -249,7 +315,7 @@ Median advertised salary by occupation, using real observed pay only. The engine
 Problem
 </dt>
 <dd>
-I wanted to predict salary from experience, education and how the role is delivered, and also explain which feature matters most.
+I wanted to predict salary from experience, education, posting duration and how the role is delivered, and also explain which feature matters most.
 </dd>
 </div>
 <div>
@@ -257,7 +323,7 @@ I wanted to predict salary from experience, education and how the role is delive
 Constraints
 </dt>
 <dd>
-After I required a real salary plus every feature present, only about <strong>2,000 rows</strong> were left out of the 30,000 that had a salary. Small, but every value is real and nothing is filled in.
+After I required a real salary plus every feature present, only about <strong>2,000 rows</strong> were left out of the roughly 30,000 that had a salary. Small, but every value is real and nothing is filled in.
 </dd>
 </div>
 <div>
@@ -265,7 +331,7 @@ After I required a real salary plus every feature present, only about <strong>2,
 Approach
 </dt>
 <dd>
-I built a Spark ML pipeline with indexing, one hot encoding and a feature vector, then fit a linear model, a polynomial model, and a random forest with 200 trees and depth 8. I split the data 80 / 20 with a fixed seed.
+I built a Spark ML pipeline with indexing, one-hot encoding and a feature vector, then fit a generalized linear model, a polynomial model with a squared experience term, and a random forest with 200 trees and depth 8. The data was split 80 / 20 with a fixed seed, and I compared the models on RMSE, R², AIC and BIC.
 </dd>
 </div>
 <div>
@@ -273,7 +339,7 @@ I built a Spark ML pipeline with indexing, one hot encoding and a feature vector
 The trap
 </dt>
 <dd>
-Spark gave me coefficients but refused the standard errors, so no p values and no confidence intervals. The reason was <strong>multicollinearity</strong>. The minimum and maximum experience columns were identical in every row, their correlation was exactly <strong>1.0</strong>. I dropped one column and the statistics came back.
+Spark gave me coefficients but refused the standard errors, so no p-values and no confidence intervals. The cause was <strong>multicollinearity</strong>: the minimum and maximum experience columns were identical in every row, correlation exactly <strong>1.0</strong>. I dropped one column and the statistics came back.
 </dd>
 </div>
 <div>
@@ -281,15 +347,15 @@ Spark gave me coefficients but refused the standard errors, so no p values and n
 Result
 </dt>
 <dd>
-Each extra year of experience is worth about <strong>$8,000</strong>, and that effect is strong. The random forest was the most accurate model, but the linear model explains the story best. On the data, experience carries about <strong>57%</strong> of the importance, far ahead of education and industry.
+Each extra year of experience is worth about <strong>$8,000</strong>, and that effect is strong. The random forest was the most accurate model, but the linear model explains the story best. Experience carries about <strong>57%</strong> of the importance, far ahead of education and industry.
 </dd>
 </div>
 </dl>
 <div class="tags">
-<span class="tag">Spark ML</span><span class="tag">Random forest</span><span class="tag">GLR</span><span class="tag">scikit-learn</span><span class="tag">Stats</span>
+<span class="tag">Spark ML</span><span class="tag">Random forest</span><span class="tag">GLR</span><span class="tag">Polynomial</span><span class="tag">Stats</span>
 </div>
 <div class="btn-row">
-<p><a href="https://github.com/simonhamra" class="btn btn--ghost">Code on GitHub</a></p>
+<p><a href="https://github.com/AD688-SP26/a05-sum26-simonhamra" class="btn btn--ghost">Repository &amp; notebook</a></p>
 </div>
 </section>
 </div>
@@ -297,72 +363,6 @@ Each extra year of experience is worth about <strong>$8,000</strong>, and that e
 <img src="assets/charts/salary_drivers.png" class="img-fluid">
 <figcaption>
 A random forest on the Lightcast features. Years of experience is by far the strongest driver of salary.
-</figcaption>
-</div>
-</div>
-</div>
-<!-- ================= A02 ================= -->
-<div id="a02" class="case">
-<div class="case__grid">
-<div class="case__text">
-<p><span class="eyebrow">Project 03 · Spark SQL · Data modeling</span></p>
-<section id="a-job-market-in-sql" class="level2">
-<h2 data-anchor-id="a-job-market-in-sql">A job market in SQL</h2>
-<p>I turned one flat file into a small data warehouse, then answered four real questions in SQL.</p>
-<dl class="dl">
-<div>
-<dt>
-Problem
-</dt>
-<dd>
-A single wide table is hard to query and full of repeated values. I wanted clean tables I could join, and a few clear answers about pay and hiring.
-</dd>
-</div>
-<div>
-<dt>
-Constraints
-</dt>
-<dd>
-The same large Lightcast file, so I built and queried everything in Spark SQL instead of loading it into memory.
-</dd>
-</div>
-<div>
-<dt>
-Approach
-</dt>
-<dd>
-I split the data into dimension tables for companies, industries and locations, each with its own key, and joined them back into one fact table of postings. That is a <strong>star schema</strong>. Then I wrote four queries: median pay by occupation in tech, the top remote employers in California, how California hiring moves month by month, and average pay across major US metros.
-</dd>
-</div>
-<div>
-<dt>
-Tradeoff
-</dt>
-<dd>
-I could have kept one flat table and queried it directly, which is faster to set up. I chose the star schema because the joins stay clean, the tables are reusable, and it is closer to how a real data warehouse works.
-</dd>
-</div>
-<div>
-<dt>
-Result
-</dt>
-<dd>
-<strong>1 star schema, 4 queries.</strong> Pay is highest in expensive metros like San Francisco and Seattle, remote hiring is concentrated in a few large employers, and California hiring dips in summer then recovers near the end of the year.
-</dd>
-</div>
-</dl>
-<div class="tags">
-<span class="tag">Spark SQL</span><span class="tag">Star schema</span><span class="tag">Joins</span><span class="tag">matplotlib</span>
-</div>
-<div class="btn-row">
-<p><a href="https://github.com/simonhamra" class="btn btn--ghost">Code on GitHub</a></p>
-</div>
-</section>
-</div>
-<div class="case__fig">
-<img src="assets/charts/pay_by_state.png" class="img-fluid">
-<figcaption>
-Median advertised salary by state. The pay gap between the top states and the rest is large.
 </figcaption>
 </div>
 </div>
@@ -375,9 +375,9 @@ Median advertised salary by state. The pay gap between the top states and the re
 <p><span class="eyebrow">Want to see the code?</span></p>
 <section id="the-notebooks-are-on-github" class="level3">
 <h3 data-anchor-id="the-notebooks-are-on-github">The notebooks are on GitHub</h3>
-<p>Every project was built in a Quarto notebook with PySpark. Happy to walk through any of them.</p>
+<p>Each assignment was built in a Quarto notebook with PySpark, and every repository above holds the full notebook, the rendered output and an AI-use disclosure. Happy to walk through any of them.</p>
 <div class="btn-row" style="justify-content:center">
-<p><a href="https://github.com/simonhamra" class="btn btn--brand">Go to GitHub</a> <a href="mailto:simhamra@gmail.com" class="btn btn--ghost">Email me</a></p>
+<p><a href="https://github.com/simonhamra" class="btn btn--brand">All my repositories</a> <a href="mailto:simhamra@gmail.com" class="btn btn--ghost">Email me</a></p>
 </div>
 </section>
 </div>
