@@ -1,0 +1,92 @@
+---
+pagetitle: "About · Simon Hamra"
+description: "Business analytics student at Boston University, moving from a marketing background into machine learning and data."
+page-layout: custom
+---
+
+::: {.page-intro}
+::: {.wrap}
+<span class="eyebrow">About</span>
+
+# Hi, I am Simon.
+
+::: {.lead}
+I am a 23 year old student from France, doing my master in Applied Business Analytics at Boston University. I like taking messy data and turning it into something a person can actually read and use.
+:::
+:::
+:::
+
+::: {.section .section--tight}
+::: {.wrap}
+::: {.bento}
+
+::: {.card .col-4}
+## My path is not a straight line
+
+I started with a bachelor in management at Rennes School of Business, then a master in marketing at HULT. For a while I thought my career would be in marketing, and my two internships were in that world. One was in e-commerce in France, the other was in London handling the social media and public image of DJs.
+
+But on almost every project, the part I enjoyed the most was the data. Looking at the numbers, finding a pattern, and explaining what it means in simple words. So I decided to stop doing it on the side and study analytics for real.
+
+Now at Boston University I work with large job posting data from Lightcast. I use PySpark to handle files that are too big for a normal laptop, I clean them, and I build models and charts on top. On my own time I am learning machine learning step by step, from simple regression up to neural networks and transformers.
+
+What I want next is a first real experience in machine learning. It is the field I grew to love, and I learn the fastest when I work on a real problem with real data.
+:::
+
+::: {.card .col-2}
+<span class="eyebrow">In short</span>
+
+::: {.tl}
+::: {.tl__item .is-now}
+<span class="tl__when">Now · Boston</span>
+<div class="tl__what">MS, Applied Business Analytics</div>
+<span class="tl__where">Boston University, MET</span>
+
+Working with Lightcast labor data in PySpark, plus self study in machine learning.
+:::
+::: {.tl__item}
+<span class="tl__when">Internship · London</span>
+<div class="tl__what">Social media and content</div>
+<span class="tl__where">OneEvent</span>
+
+Managed the public image of DJs. Created reels and posts, and grew their reach.
+:::
+::: {.tl__item}
+<span class="tl__when">Internship · France</span>
+<div class="tl__what">E-commerce and marketing</div>
+<span class="tl__where">Fereira</span>
+
+SEO and online marketing for an e-commerce shop.
+:::
+::: {.tl__item}
+<span class="tl__when">Master · marketing</span>
+<div class="tl__what">MSc, Marketing</div>
+<span class="tl__where">HULT</span>
+:::
+::: {.tl__item}
+<span class="tl__when">Bachelor · management</span>
+<div class="tl__what">BSc, Management</div>
+<span class="tl__where">Rennes School of Business</span>
+:::
+:::
+:::
+
+:::
+:::
+:::
+
+::: {.section .section--tight}
+::: {.wrap}
+::: {.contact-card}
+<span class="eyebrow">What I am looking for</span>
+
+### A first role in machine learning or data
+
+I am open to internships and junior roles. If you are hiring and you think I could fit, I would be happy to talk.
+
+::: {.btn-row style="justify-content:center"}
+[Download my CV](assets/cv/Simon-Hamra-CV.pdf){.btn .btn--brand}
+[See my projects](projects.qmd){.btn .btn--ghost}
+:::
+:::
+:::
+:::
