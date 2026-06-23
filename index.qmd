@@ -1,0 +1,127 @@
+---
+pagetitle: "Simon Hamra · Labor market data with PySpark"
+description: "Business analytics student at Boston University. I turn large Lightcast job posting data into clear answers about pay, skills and demand, with PySpark and machine learning."
+page-layout: custom
+include-in-header:
+  - text: |
+      <meta property="og:title" content="Simon Hamra · Labor market data with PySpark">
+      <meta property="og:description" content="I turn large job posting data into clear answers about pay, skills and demand.">
+---
+
+::: {.hero}
+::: {.hero__glow}
+:::
+::: {.wrap}
+<span class="eyebrow reveal">Boston University · Applied Business Analytics</span>
+
+# [Simon Hamra.]{.reveal .d1}<br>[I read labor markets]{.reveal .d2} [with data.]{.accent .reveal .d2}
+
+::: {.hero__thesis .reveal .d3}
+I take large job posting data from Lightcast and turn it into clear answers about pay, skills and demand. I keep the heavy work in PySpark, and I am moving into machine learning, which is the field I want to build my career in.
+:::
+
+::: {.btn-row .reveal .d4}
+[See my projects](projects.qmd){.btn .btn--brand}
+[Download CV](assets/cv/Simon-Hamra-CV.pdf){.btn .btn--ghost}
+[Email me](mailto:simhamra@gmail.com){.btn .btn--link}
+:::
+
+::: {.hero__viz .reveal .d5}
+![](assets/charts/hero_market.png)
+<figcaption>Every dot is a real job posting from the Lightcast data: years of experience against advertised salary. The bright point is where I want to be, an analyst moving into machine learning.</figcaption>
+:::
+:::
+:::
+
+::: {.section .section--tight}
+::: {.wrap}
+::: {.chips}
+::: {.chip}
+**700 MB** <span>read and cleaned in Spark</span>
+:::
+::: {.chip}
+**72,498** <span>job postings analyzed</span>
+:::
+::: {.chip}
+**3 models** <span>compared on real salaries</span>
+:::
+::: {.chip}
+**57%** <span>of pay driven by experience</span>
+:::
+:::
+:::
+:::
+
+::: {.section}
+::: {.wrap}
+::: {.section__head}
+<span class="eyebrow">Selected work</span>
+
+## Three projects, one dataset, real numbers
+All three come from the same Lightcast job postings data in my BU analytics course. I kept the heavy work in Spark and only pulled small tables out to draw the charts.
+:::
+
+::: {.bento}
+
+<div class="pcard col-4">
+<a class="pcard__link" href="projects.qmd#a03">Salary insights at scale</a>
+<div class="pcard__media"><img src="assets/charts/pay_by_education.png" alt="Median salary by education level"></div>
+<div class="pcard__body">
+<span class="pcard__meta">PySpark · Visualization</span>
+<h3>Salary insights at scale</h3>
+<p>I loaded a 700 MB file in Spark, cleaned the messy salary and education fields, filled the gaps in a careful way, and built charts that explain pay across industry, education and remote work.</p>
+<div class="tags"><span class="tag">PySpark</span><span class="tag">pandas</span><span class="tag">Plotly</span><span class="tag">Seaborn</span></div>
+<div class="pcard__foot"><span class="pcard__result">72,498 postings</span><span class="pcard__go">Read case study →</span></div>
+</div>
+</div>
+
+<div class="pcard col-2">
+<a class="pcard__link" href="projects.qmd#a05">Predicting salary, and a trap</a>
+<div class="pcard__media"><img src="assets/charts/salary_drivers.png" alt="What moves salary, feature importance"></div>
+<div class="pcard__body">
+<span class="pcard__meta">Machine learning</span>
+<h3>Predicting salary, and a trap</h3>
+<p>Linear, polynomial and random forest models. Spark refused to give me standard errors, so I had to find out why.</p>
+<div class="tags"><span class="tag">Spark ML</span><span class="tag">Random forest</span></div>
+<div class="pcard__foot"><span class="pcard__result">+$8k / year of experience</span><span class="pcard__go">→</span></div>
+</div>
+</div>
+
+<div class="pcard pcard--wide col-6">
+<a class="pcard__link" href="projects.qmd#a02">A job market in SQL</a>
+<div class="pcard__media"><img src="assets/charts/pay_by_state.png" alt="Top paying states"></div>
+<div class="pcard__body">
+<span class="pcard__meta">Spark SQL · Data modeling</span>
+<h3>A job market in SQL</h3>
+<p>I broke one flat file into clean relational tables for companies, industries and locations, then answered four real questions about pay, remote work, and how hiring moves over the year.</p>
+<div class="tags"><span class="tag">Spark SQL</span><span class="tag">Star schema</span><span class="tag">Joins</span><span class="tag">matplotlib</span></div>
+<div class="pcard__foot"><span class="pcard__result">1 star schema, 4 queries</span><span class="pcard__go">Read case study →</span></div>
+</div>
+</div>
+
+:::
+:::
+:::
+
+::: {.section .section--tight}
+::: {.wrap}
+::: {.bento}
+::: {.card .col-4}
+<span class="eyebrow">A short word</span>
+
+### From marketing to machine learning
+I started in business and marketing in France, then did two internships in e-commerce and social media. Along the way I found that I like the data part the most. Now I study applied business analytics at Boston University and I am teaching myself machine learning on top of the course.
+
+[More about me](about.qmd){.btn--link}
+:::
+::: {.card .col-2}
+<span class="eyebrow">Get in touch</span>
+
+### Open to ML roles
+I am looking for a real first experience in machine learning or data. The fastest way to reach me is email.
+
+[simhamra@gmail.com](mailto:simhamra@gmail.com){.btn--link}
+:::
+:::
+:::
+:::
