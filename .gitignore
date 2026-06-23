@@ -1,0 +1,16 @@
+# Quarto
+/_site/
+/.quarto/
+_quarto_internal_scss_error.scss
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Agent tooling (not part of the portfolio)
+/.agents/

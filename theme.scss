@@ -1,0 +1,20 @@
+/*-- scss:defaults --*/
+// ===========================================================================
+// "Signal" theme  ·  dark only, Geist Mono, indigo + cyan, NO PINK anywhere.
+// Sets the Bootstrap SASS defaults. The component styles live in styles.css.
+// Geist Mono is loaded via a <link> in the HTML head (see _quarto.yml).
+// ===========================================================================
+$font-family-monospace: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+$font-family-base:      $font-family-monospace;
+$font-family-sans-serif:$font-family-monospace;
+$headings-font-family:  $font-family-monospace;
+
+$body-bg:        #050505;
+$body-color:     #888888;
+$link-color:     #A5B4FC;   // accent text on dark (never the dark indigo fill)
+$link-hover-color: #C7D2FE;
+$headings-color: #EDEDED;
+$border-color:   #1A1A1A;
+
+$navbar-bg: transparent;
+$navbar-padding-y: 0;

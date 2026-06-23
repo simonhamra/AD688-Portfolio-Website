@@ -1,0 +1,72 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+
+# ---------------------------------------------------------------------------
+# Simon Hamra — portfolio
+# Links: email is real. The GitHub and LinkedIn URLs below are placeholders.
+# >>> UPDATE the two lines marked PLACEHOLDER with your real handles. <<<
+# ---------------------------------------------------------------------------
+website:
+  title: "Simon Hamra"
+  site-url: "https://simonhamra.github.io"
+  description: "Business analytics student turning large labor market data into clear answers, with PySpark and machine learning."
+  favicon: assets/favicon.svg
+  navbar:
+    pinned: true
+    logo: assets/favicon.svg
+    title: "SIMON HAMRA"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Projects"
+        href: projects.qmd
+      - text: "CV"
+        href: cv.qmd
+      - text: "Contact"
+        href: contact.qmd
+    right:
+      - icon: github
+        href: "https://github.com/simonhamra"   # PLACEHOLDER — set your real GitHub
+        aria-label: GitHub
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/simonhamra"  # PLACEHOLDER — set your real LinkedIn
+        aria-label: LinkedIn
+      - icon: envelope
+        href: "mailto:simhamra@gmail.com"
+        aria-label: Email
+  page-footer:
+    border: false
+    left: |
+      © 2026 Simon Hamra. Built with Quarto.
+    right:
+      - icon: github
+        href: "https://github.com/simonhamra"
+        aria-label: GitHub
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/simonhamra"
+        aria-label: LinkedIn
+      - icon: envelope
+        href: "mailto:simhamra@gmail.com"
+        aria-label: Email
+
+format:
+  html:
+    theme: theme.scss
+    css: styles.css
+    toc: false
+    page-layout: custom
+    smooth-scroll: true
+    grid:
+      body-width: 1280px
+    include-in-header:
+      - text: |
+          <meta name="author" content="Simon Hamra">
+          <meta property="og:type" content="website">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap">
