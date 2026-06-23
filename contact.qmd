@@ -1,0 +1,65 @@
+---
+pagetitle: "Contact · Simon Hamra"
+description: "Get in touch with Simon Hamra. Email, GitHub and LinkedIn."
+page-layout: custom
+---
+
+::: {.page-intro}
+::: {.wrap}
+<span class="eyebrow">Contact</span>
+
+# Let us talk.
+
+::: {.lead}
+I am looking for a first role in machine learning or data, and I am happy to talk about any of my projects. Email is the fastest way to reach me. I usually answer within a day.
+:::
+:::
+:::
+
+::: {.section .section--tight}
+::: {.wrap}
+::: {.contact-card}
+<span class="eyebrow">Email</span>
+
+[simhamra@gmail.com](mailto:simhamra@gmail.com){.big-mail}
+
+<div class="iconrow">
+<a href="https://github.com/simonhamra"><i class="bi bi-github"></i> GitHub</a>
+<a href="https://www.linkedin.com/in/simonhamra"><i class="bi bi-linkedin"></i> LinkedIn</a>
+<span class="loc"><i class="bi bi-geo-alt"></i> Boston, MA</span>
+</div>
+:::
+:::
+:::
+
+::: {.section .section--tight}
+::: {.wrap}
+
+::: {.section__head}
+<span class="eyebrow">Good to know</span>
+
+## A few quick facts
+:::
+
+::: {.bento}
+::: {.card .col-2}
+<span class="eyebrow">Open to</span>
+
+### Internships and junior roles
+In machine learning, data science or analytics. Remote or in the Boston area.
+:::
+::: {.card .col-2}
+<span class="eyebrow">Best for</span>
+
+### A real first project
+I do my best work on a concrete problem with real data, not just theory.
+:::
+::: {.card .col-2}
+<span class="eyebrow">Languages</span>
+
+### French and English
+Native French, professional English. Comfortable working in both.
+:::
+:::
+:::
+:::
