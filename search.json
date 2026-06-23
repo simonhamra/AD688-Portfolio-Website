@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "projects.html#salary-insights-at-scale",
+    "href": "projects.html#salary-insights-at-scale",
+    "title": "Simon Hamra",
+    "section": "Salary insights at scale",
+    "text": "Salary insights at scale\nI took a 700 MB Lightcast file, cleaned it in Spark, and turned it into clear pictures of who gets paid what.\n\n\n\nProblem\n\n\nThe file holds tens of thousands of job postings, but it is messy. Salary, experience and education all load as text, and most rows do not even list a salary. I needed clean, honest numbers I could chart.\n\n\n\n\nConstraints\n\n\nThe raw file is close to 700 MB, too big to open in pandas on a laptop. So all the heavy work, loading, casting, medians and grouping, had to stay in Spark. I only pulled small tables out at the end.\n\n\n\n\nApproach\n\n\nI cast the salary and experience columns to numbers, computed medians in Spark, and filled missing salaries with a careful midpoint rule. I kept a copy of the real observed salary, so when I report a true median I never use a filled value. Then I drew the charts with Plotly and Seaborn on a custom theme.\n\n\n\n\nTradeoff\n\n\nI had to choose between dropping rows with no salary or filling them. Dropping throws away most of the data. Filling keeps it, but it can hide the truth. My answer was to do both: fill for completeness, but always use the observed salary for any real median.\n\n\n\n\nResult\n\n\n72,498 postings cleaned and charted. Full time roles pay more, remote and hybrid roles lean higher, and the best paid occupation reaches about $158k while the most common roles sit near $95k to $126k.\n\n\n\n\nPySparkpandasPlotlySeabornQuarto\n\n\nCode on GitHub"
+  },
+  {
+    "objectID": "projects.html#predicting-salary-and-a-trap",
+    "href": "projects.html#predicting-salary-and-a-trap",
+    "title": "Simon Hamra",
+    "section": "Predicting salary, and a trap",
+    "text": "Predicting salary, and a trap\nI trained three models to predict salary, and hit a classic trap that stops a model from giving any statistics.\n\n\n\nProblem\n\n\nI wanted to predict salary from experience, education and how the role is delivered, and also explain which feature matters most.\n\n\n\n\nConstraints\n\n\nAfter I required a real salary plus every feature present, only about 2,000 rows were left out of the 30,000 that had a salary. Small, but every value is real and nothing is filled in.\n\n\n\n\nApproach\n\n\nI built a Spark ML pipeline with indexing, one hot encoding and a feature vector, then fit a linear model, a polynomial model, and a random forest with 200 trees and depth 8. I split the data 80 / 20 with a fixed seed.\n\n\n\n\nThe trap\n\n\nSpark gave me coefficients but refused the standard errors, so no p values and no confidence intervals. The reason was multicollinearity. The minimum and maximum experience columns were identical in every row, their correlation was exactly 1.0. I dropped one column and the statistics came back.\n\n\n\n\nResult\n\n\nEach extra year of experience is worth about $8,000, and that effect is strong. The random forest was the most accurate model, but the linear model explains the story best. On the data, experience carries about 57% of the importance, far ahead of education and industry.\n\n\n\n\nSpark MLRandom forestGLRscikit-learnStats\n\n\nCode on GitHub"
+  },
+  {
+    "objectID": "projects.html#a-job-market-in-sql",
+    "href": "projects.html#a-job-market-in-sql",
+    "title": "Simon Hamra",
+    "section": "A job market in SQL",
+    "text": "A job market in SQL\nI turned one flat file into a small data warehouse, then answered four real questions in SQL.\n\n\n\nProblem\n\n\nA single wide table is hard to query and full of repeated values. I wanted clean tables I could join, and a few clear answers about pay and hiring.\n\n\n\n\nConstraints\n\n\nThe same large Lightcast file, so I built and queried everything in Spark SQL instead of loading it into memory.\n\n\n\n\nApproach\n\n\nI split the data into dimension tables for companies, industries and locations, each with its own key, and joined them back into one fact table of postings. That is a star schema. Then I wrote four queries: median pay by occupation in tech, the top remote employers in California, how California hiring moves month by month, and average pay across major US metros.\n\n\n\n\nTradeoff\n\n\nI could have kept one flat table and queried it directly, which is faster to set up. I chose the star schema because the joins stay clean, the tables are reusable, and it is closer to how a real data warehouse works.\n\n\n\n\nResult\n\n\n1 star schema, 4 queries. Pay is highest in expensive metros like San Francisco and Seattle, remote hiring is concentrated in a few large employers, and California hiring dips in summer then recovers near the end of the year.\n\n\n\n\nSpark SQLStar schemaJoinsmatplotlib\n\n\nCode on GitHub"
+  },
+  {
+    "objectID": "cv.html#business-and-marketing-first-data-and-ml-now",
+    "href": "cv.html#business-and-marketing-first-data-and-ml-now",
+    "title": "Simon Hamra",
+    "section": "Business and marketing first, data and ML now",
+    "text": "Business and marketing first, data and ML now"
+  },
+  {
+    "objectID": "cv.html#what-i-work-with",
+    "href": "cv.html#what-i-work-with",
+    "title": "Simon Hamra",
+    "section": "What I work with",
+    "text": "What I work with"
+  },
+  {
+    "objectID": "about.html#my-path-is-not-a-straight-line",
+    "href": "about.html#my-path-is-not-a-straight-line",
+    "title": "Simon Hamra",
+    "section": "My path is not a straight line",
+    "text": "My path is not a straight line\nI started with a bachelor in management at Rennes School of Business, then a master in marketing at HULT. For a while I thought my career would be in marketing, and my two internships were in that world. One was in e-commerce in France, the other was in London handling the social media and public image of DJs.\nBut on almost every project, the part I enjoyed the most was the data. Looking at the numbers, finding a pattern, and explaining what it means in simple words. So I decided to stop doing it on the side and study analytics for real.\nNow at Boston University I work with large job posting data from Lightcast. I use PySpark to handle files that are too big for a normal laptop, I clean them, and I build models and charts on top. On my own time I am learning machine learning step by step, from simple regression up to neural networks and transformers.\nWhat I want next is a first real experience in machine learning. It is the field I grew to love, and I learn the fastest when I work on a real problem with real data."
+  },
+  {
+    "objectID": "contact.html#a-few-quick-facts",
+    "href": "contact.html#a-few-quick-facts",
+    "title": "Simon Hamra",
+    "section": "A few quick facts",
+    "text": "A few quick facts"
+  },
+  {
+    "objectID": "index.html#three-projects-one-dataset-real-numbers",
+    "href": "index.html#three-projects-one-dataset-real-numbers",
+    "title": "Simon Hamra",
+    "section": "Three projects, one dataset, real numbers",
+    "text": "Three projects, one dataset, real numbers\nAll three come from the same Lightcast job postings data in my BU analytics course. I kept the heavy work in Spark and only pulled small tables out to draw the charts."
+  }
+]
