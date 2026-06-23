@@ -20,6 +20,8 @@ concurrency:
 
 jobs:
   build-deploy:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Check out
