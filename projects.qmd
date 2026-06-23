@@ -119,14 +119,6 @@ I trained three models to predict salary, and hit a classic trap that stops a mo
 ::: {.wrap}
 ::: {.contact-card}
 <span class="eyebrow">Want to see the code?</span>
-
-### The notebooks are on GitHub
-
-Each assignment was built in a Quarto notebook with PySpark, and every repository above holds the full notebook, the rendered output and an AI-use disclosure. Happy to walk through any of them.
-
-::: {.btn-row style="justify-content:center"}
-[All my repositories](https://github.com/simonhamra){.btn .btn--brand}
-[Email me](mailto:simhamra@gmail.com){.btn .btn--ghost}
 :::
 :::
 :::

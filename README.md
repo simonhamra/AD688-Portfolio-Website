@@ -4,7 +4,7 @@ My personal website. It shows who I am, the data projects I built at Boston
 University, my CV, and how to reach me. Built with [Quarto](https://quarto.org)
 and a custom dark theme.
 
-**Live site:** https://simonhamra.github.io  *(update once GitHub Pages is on)*
+**Live site:** https://simonhamra.github.io/AD688-Portfolio-Website/
 
 ## What is inside
 
@@ -53,16 +53,7 @@ Two ways:
    In the repo, go to **Settings → Pages → Build and deployment → Source:
    GitHub Actions**. That is all.
 
-2. **One command.** From your machine:
+2. **One command.** From my machine:
    ```bash
    quarto publish gh-pages
    ```
-
-## Before you publish
-
-Two links are placeholders. Update them with your real handles:
-
-- GitHub and LinkedIn URLs in `_quarto.yml` (navbar and footer), and the
-  "Code on GitHub" links in `projects.qmd`.
-
-Email (`simhamra@gmail.com`) is already correct.

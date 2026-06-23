@@ -11,7 +11,7 @@ project:
 # ---------------------------------------------------------------------------
 website:
   title: "Simon Hamra"
-  site-url: "https://simonhamra.github.io"
+  site-url: "https://simonhamra.github.io/AD688-Portfolio-Website/"
   description: "Business analytics student turning large labor market data into clear answers, with PySpark and machine learning."
   favicon: assets/favicon.svg
   navbar:
