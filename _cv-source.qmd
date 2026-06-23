@@ -1,0 +1,53 @@
+---
+title: "Simon Hamra"
+subtitle: "Applied Business Analytics · Machine Learning"
+format:
+  typst:
+    fontsize: 10pt
+    margin:
+      x: 1.7cm
+      y: 1.6cm
+    mainfont: "DejaVu Sans"
+---
+
+```{=typst}
+#show heading: set text(fill: rgb("#4F46E5"))
+#show heading.where(level: 2): set text(size: 11pt)
+#set par(leading: 0.62em)
+#v(-6pt)
+```
+
+Boston, MA · simhamra\@gmail.com · github.com/simonhamra · linkedin.com/in/simonhamra
+
+## Summary
+
+Business analytics master student with a background in business and marketing. I work with large labor market data in PySpark and I am moving into machine learning. I have a solid base in statistics and I try to explain results in clear, simple terms. I am looking for a first role in machine learning or data.
+
+## Skills
+
+- **Programming:** Python (intermediate: pandas, scikit-learn, TensorFlow / Keras), R, SQL
+- **Machine learning:** regression, tree models, neural networks, transformers (learning)
+- **Big data:** PySpark, Spark SQL
+- **Cloud and tools:** AWS EC2, Power BI, Quarto, Git
+- **Foundations:** statistics and probability
+
+## Education
+
+- **MS, Applied Business Analytics** — Boston University, Metropolitan College *(current)*
+- **MSc, Marketing** — HULT International Business School
+- **BSc, Management** — Rennes School of Business
+
+## Experience
+
+- **Social media and content — OneEvent, London.** Managed the public image of DJs on social media. Created reels and posts and helped grow their reach.
+- **E-commerce and marketing intern — Fereira, France.** SEO and online marketing for an e-commerce shop.
+
+## Selected projects (Boston University)
+
+- **Salary insights at scale.** Cleaned a 700 MB Lightcast file in PySpark and charted pay across 72,498 job postings.
+- **Predicting salary.** Built linear, polynomial and random forest models, and found and fixed a multicollinearity problem that blocked the model statistics.
+- **A job market in SQL.** Built a star schema from one flat file and answered four labor market questions in Spark SQL.
+
+## Languages
+
+French (native) · English (professional)

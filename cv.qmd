@@ -1,0 +1,138 @@
+---
+pagetitle: "CV · Simon Hamra"
+description: "Curriculum vitae of Simon Hamra: applied business analytics, PySpark and machine learning. Downloadable PDF."
+page-layout: custom
+---
+
+::: {.page-intro}
+::: {.wrap}
+<span class="eyebrow">CV</span>
+
+# Curriculum vitae.
+
+::: {.lead}
+A short summary of my background, skills and experience. You can read it here or download the full PDF.
+:::
+
+::: {.btn-row}
+[Download PDF](assets/cv/Simon-Hamra-CV.pdf){.btn .btn--brand}
+[Email me](mailto:simhamra@gmail.com){.btn .btn--ghost}
+:::
+:::
+:::
+
+::: {.section .section--tight}
+::: {.wrap}
+
+::: {.section__head}
+<span class="eyebrow">Profile</span>
+
+## Business and marketing first, data and ML now
+:::
+
+<p class="lead" style="max-width:75ch">I am a business analytics master student with a background in business and marketing. I work with large labor market data in PySpark, I have a solid base in statistics, and I am moving into machine learning. I learn fast when the problem is real, and I try to explain results in plain words.</p>
+
+:::
+:::
+
+::: {.section .section--tight}
+::: {.wrap}
+::: {.section__head}
+<span class="eyebrow">Skills</span>
+
+## What I work with
+:::
+
+::: {.skills}
+::: {.skill}
+### Programming
+<div class="tags"><span class="tag">Python (intermediate)</span><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">TensorFlow / Keras</span><span class="tag">R</span><span class="tag">SQL</span></div>
+:::
+::: {.skill}
+### Machine learning
+<div class="tags"><span class="tag">Regression</span><span class="tag">Tree models</span><span class="tag">Neural networks</span><span class="tag">Transformers (learning)</span></div>
+:::
+::: {.skill}
+### Big data
+<div class="tags"><span class="tag">PySpark</span><span class="tag">Spark SQL</span></div>
+:::
+::: {.skill}
+### Cloud and tools
+<div class="tags"><span class="tag">AWS EC2</span><span class="tag">Power BI</span><span class="tag">Quarto</span><span class="tag">Git</span></div>
+:::
+::: {.skill}
+### Foundations
+<div class="tags"><span class="tag">Statistics</span><span class="tag">Probability</span></div>
+:::
+::: {.skill}
+### Languages
+<div class="tags"><span class="tag">French (native)</span><span class="tag">English (professional)</span></div>
+:::
+:::
+:::
+:::
+
+::: {.section .section--tight}
+::: {.wrap}
+::: {.bento}
+
+::: {.card .col-3}
+<span class="eyebrow">Education</span>
+
+::: {.tl}
+::: {.tl__item .is-now}
+<span class="tl__when">Current · Boston</span>
+<div class="tl__what">MS, Applied Business Analytics</div>
+<span class="tl__where">Boston University, Metropolitan College</span>
+:::
+::: {.tl__item}
+<span class="tl__when">Master</span>
+<div class="tl__what">MSc, Marketing</div>
+<span class="tl__where">HULT International Business School</span>
+:::
+::: {.tl__item}
+<span class="tl__when">Bachelor</span>
+<div class="tl__what">BSc, Management</div>
+<span class="tl__where">Rennes School of Business</span>
+:::
+:::
+:::
+
+::: {.card .col-3}
+<span class="eyebrow">Experience</span>
+
+::: {.tl}
+::: {.tl__item}
+<span class="tl__when">London</span>
+<div class="tl__what">Social media and content</div>
+<span class="tl__where">OneEvent</span>
+
+Managed the public image of DJs on social media. Created reels and posts, and helped grow their reach.
+:::
+::: {.tl__item}
+<span class="tl__when">France</span>
+<div class="tl__what">E-commerce and marketing intern</div>
+<span class="tl__where">Fereira</span>
+
+SEO and online marketing for an e-commerce shop.
+:::
+:::
+:::
+
+:::
+:::
+:::
+
+::: {.section .section--tight}
+::: {.wrap}
+::: {.contact-card}
+<span class="eyebrow">Take it with you</span>
+
+### Download the full CV
+
+::: {.btn-row style="justify-content:center"}
+[Download PDF](assets/cv/Simon-Hamra-CV.pdf){.btn .btn--brand}
+:::
+:::
+:::
+:::
