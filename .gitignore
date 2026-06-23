@@ -14,3 +14,5 @@ __pycache__/
 
 # Agent tooling (not part of the portfolio)
 /.agents/
+
+**/*.quarto_ipynb
