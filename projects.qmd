@@ -111,15 +111,5 @@ I trained three models to predict salary, and hit a classic trap that stops a mo
 :::
 :::
 :::
-
-:::
 :::
 
-::: {.section .section--tight}
-::: {.wrap}
-::: {.contact-card}
-<span class="eyebrow">Want to see the code?</span>
-:::
-:::
-:::
-:::
