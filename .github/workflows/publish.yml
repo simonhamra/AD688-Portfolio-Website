@@ -30,7 +30,7 @@ jobs:
         run: quarto render
 
       - name: Deploy to gh-pages branch
-        uses: JamesIves/actions-gh-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: _site
